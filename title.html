@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <style>
+    html, body {
+      height: 100%;
+      width: 100%;
+      margin: 0px;
+    }
+    body {
+      background: #111 url(https://cdn.jsdelivr.net/gh/nurimoores/clawapps@c256f90f297143497e6f61dba4571701658e07a1/classic/bg_main.png);
+      display: grid;
+      place-items: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="logo"><img src="logo.png"/></div>
+  <img src="play.png" onclick="launchGame()" style="cursor: pointer;"/>
+
+  <script>
+    function launchGame() {
+      // Replace the entire document with a new one
+      document.open();
+      document.write(`<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <style>
+    html, body {
+      height: 100%;
+      width: 100%;
+      margin: 0px;
+    }
+    body {
+      background: #111 url(https://cdn.jsdelivr.net/gh/nurimoores/clawapps@c256f90f297143497e6f61dba4571701658e07a1/classic/bg_main.png);
+      display: grid;
+      place-items: center;
+    }
+    canvas {
+      height: 100vh;
+      width: 100vw;
+      background: #000;
+      display: block;
+      box-shadow: 0 3px 5px rgba(0,0,0,.4);
+      border-radius: 4px;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+    span {
+      font: Bold 18px Calibri;
+      color: #F67;
+      text-shadow: 1px 1px 5px rgba(0,0,0,.5);
+      position: absolute;
+      left: 10px;
+      bottom: 10px;
+    }
+    @media only screen and (min-width: 1078px) {
+      canvas {
+        width: 100vw;
+        height: 100vh;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="logo"><img src="logo.png"/></div>
+  <img src="survive.png" onclick="window.location.href='creative/index.html'" style="cursor: pointer;"/>
+  <img src="battle.png" onclick="alert('Battle mode is still experimental.')" style="cursor: pointer;"/>
+</body>
+</html>`);
+      document.close();
+    }
+  </script>
+</body>
+</html>
